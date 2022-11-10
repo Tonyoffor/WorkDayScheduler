@@ -1,4 +1,13 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+var currentDay = $('#currentDay');
+var saveBtn = $('saveBtn');
+
+
+
+
+const d = new Date();
+document.getElementById("today").innerHTML = d;
+
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
@@ -8,7 +17,16 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  //
+
+
+  //function myFunction() {
+    //var element = document.getElementById("myDIV");
+    //element.classList.remove("mystyle");
+  //}
+  //function myFunction() {
+  //var element = document.getElementById("myDIV");
+  //element.classList.remove("mystyle");
+//}
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
