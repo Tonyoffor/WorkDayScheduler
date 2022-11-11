@@ -5,6 +5,13 @@ var userinput = $('userinput');
 
 var nine = document.getElementById('nine').value
 var ten = document.getElementById('ten').value
+var eleven = document.getElementById('eleven').value
+var twelve = document.getElementById('twelve').value
+var one = document.getElementById('one').value
+var two = document.getElementById('two').value
+var three = document.getElementById('three').value
+var four = document.getElementById('four').value
+var five = document.getElementById('five').value
 
 const d = new Date();
 document.getElementById("today").innerHTML = d;
@@ -21,13 +28,20 @@ $(".saveBtn").on("click", function(){
 console.log(this)  
 
   localStorage.setItem('hour-9', nine);
+  localStorage.setItem('hour-10', ten);
+  localStorage.setItem('hour-11', eleven);
+  localStorage.setItem('hour-12', twelve);
+  localStorage.setItem('hour-1', one);
+  localStorage.setItem('hour-2', two);
+  localStorage.setItem('hour-3', three);
+  localStorage.setItem('hour-4', four);
+  localStorage.setItem('hour-5', five);
+
   console.log(document.getElementById('nine').value)
   
 })
 
-function myFunction(event) { 
-  var x = event.bubbles;
-  document.getElement(".saveBtn").innerHTML = x;}
+
 
 
   // TODO: Add a listener for click events on the save button. This code should
