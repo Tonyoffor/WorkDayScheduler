@@ -1,21 +1,33 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 var currentDay = $('#currentDay');
 var saveBtn = $('saveBtn');
-var userinput = $('userinput')
-var demo = $('demo')
+var userinput = $('userinput');
 
+var nine = document.getElementById('nine').value
+var ten = document.getElementById('ten').value
 
 const d = new Date();
 document.getElementById("today").innerHTML = d;
+//will it be easier to us (UTC) on date so I can attach color attributes
 
+//new Date = dayjs().hour(12) 
+//hour	h	now, but with 0 mins, 0 secs, and 0 ms
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-function myFunction() {
-  var x = document.getElementById("myText").value;
-  document.getElementById("demo").innerHTML = x;
-}
 
+
+$(".saveBtn").on("click", function(){
+console.log(this)  
+
+  localStorage.setItem('hour-9', nine);
+  console.log(document.getElementById('nine').value)
+  
+})
+
+function myFunction(event) { 
+  var x = event.bubbles;
+  document.getElement(".saveBtn").innerHTML = x;}
 
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -32,7 +44,7 @@ function myFunction() {
   //}
   //function myFunction() {
   //var element = document.getElementById("myDIV");
-  //element.classList.remove("mystyle");
+  //element.classList.add("mystyle");
 //}
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
