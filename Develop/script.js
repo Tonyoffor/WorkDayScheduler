@@ -7,7 +7,7 @@ var nine = document.getElementById('nine').value
 var ten = document.getElementById('ten').value
 var eleven = document.getElementById('eleven').value
 var twelve = document.getElementById('twelve').value
-var one = document.getElementById('one').value
+var eleven = document.getElementById('one').value
 var two = document.getElementById('two').value
 var three = document.getElementById('three').value
 var four = document.getElementById('four').value
@@ -22,7 +22,7 @@ document.getElementById("today").innerHTML = d;
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-
+currentTime();
 
 $(".saveBtn").on("click", function(){
 console.log(this)  
@@ -31,18 +31,41 @@ console.log(this)
   localStorage.setItem('hour-10', ten);
   localStorage.setItem('hour-11', eleven);
   localStorage.setItem('hour-12', twelve);
-  localStorage.setItem('hour-1', one);
-  localStorage.setItem('hour-2', two);
-  localStorage.setItem('hour-3', three);
-  localStorage.setItem('hour-4', four);
-  localStorage.setItem('hour-5', five);
+  localStorage.setItem('hour-13', one);
+  localStorage.setItem('hour-14', two);
+  localStorage.setItem('hour-15', three);
+  localStorage.setItem('hour-16', four);
+  localStorage.setItem('hour-17', five);
 
   console.log(document.getElementById('nine').value)
   
 })
 
 
-
+function currentTime(){
+  const d = new Date();
+let hour = d.getHours();
+var time_blocks = document.getElementsByClassName('hour');
+var textareas= document.getElementsByClassName('description');
+for (let i = 0; i < time_blocks.length; i++) {
+  timelength= time_blocks[i].innerHTML.length;
+  timelength=timelength-3;
+  time=time_blocks[i].innerHTML.substring(0,timelength);
+  console.log(time);
+  time_blocks[i].style.color= 'White'; 
+  if (time==hour){
+    time_blocks[i].style.backgroundColor= '#ff6961'; 
+   textareas[i].style.backgroundColor='#ff6961';
+  }
+  else if (time<hour){
+    time_blocks[i].style.backgroundColor= '#d3d3d3';
+    textareas[i].style.backgroundColor='#d3d3d3';
+  }
+  else if (time>hour){
+    time_blocks[i].style.backgroundColor= '#77dd77';
+    textareas[i].style.backgroundColor='#77dd77';
+  }
+}}
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -54,7 +77,8 @@ console.log(this)
 
   //function myFunction() {
     //var element = document.getElementById("myDIV");
-    //element.classList.remove("mystyle");
+    //element.classList.remove("past");
+    //element.classList.add("present");
   //}
   //function myFunction() {
   //var element = document.getElementById("myDIV");
@@ -69,8 +93,3 @@ console.log(this)
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-
-
-
