@@ -3,7 +3,7 @@ var currentDay = $('#currentDay');
 var saveBtn = $('saveBtn');
 var userinput = $('userinput');
 
-var nine = document.getElementById('nine').value
+var nine = document.getElementById('nine');
 var ten = document.getElementById('ten').value
 var eleven = document.getElementById('eleven').value
 var twelve = document.getElementById('twelve').value
@@ -15,18 +15,12 @@ var five = document.getElementById('five').value
 
 const d = new Date();
 document.getElementById("today").innerHTML = d;
-//will it be easier to us (UTC) on date so I can attach color attributes
 
-//new Date = dayjs().hour(12) 
-//hour	h	now, but with 0 mins, 0 secs, and 0 ms
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
 currentTime();
 
 $(".saveBtn").on("click", function(){
 console.log(this)  
-
   localStorage.setItem('hour-9', nine);
   localStorage.setItem('hour-10', ten);
   localStorage.setItem('hour-11', eleven);
@@ -35,10 +29,7 @@ console.log(this)
   localStorage.setItem('hour-14', two);
   localStorage.setItem('hour-15', three);
   localStorage.setItem('hour-16', four);
-  localStorage.setItem('hour-17', five);
-
-  console.log(document.getElementById('nine').value)
-  
+  localStorage.setItem('hour-17', five);  
 })
 
 
@@ -75,15 +66,7 @@ for (let i = 0; i < time_blocks.length; i++) {
   // useful when saving the description in local storage?
 
 
-  //function myFunction() {
-    //var element = document.getElementById("myDIV");
-    //element.classList.remove("past");
-    //element.classList.add("present");
-  //}
-  //function myFunction() {
-  //var element = document.getElementById("myDIV");
-  //element.classList.add("mystyle");
-//}
+  
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
