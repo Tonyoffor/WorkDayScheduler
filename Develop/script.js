@@ -3,15 +3,7 @@ var currentDay = $('#currentDay');
 var saveBtn = $('saveBtn');
 var userinput = $('userinput');
 
-var nine = document.getElementById('nine');
-var ten = document.getElementById('ten').value
-var eleven = document.getElementById('eleven').value
-var twelve = document.getElementById('twelve').value
-var eleven = document.getElementById('one').value
-var two = document.getElementById('two').value
-var three = document.getElementById('three').value
-var four = document.getElementById('four').value
-var five = document.getElementById('five').value
+
 
 const d = new Date();
 document.getElementById("today").innerHTML = d;
@@ -20,17 +12,31 @@ document.getElementById("today").innerHTML = d;
 currentTime();
 
 $(".saveBtn").on("click", function(){
-console.log(this)  
-  localStorage.setItem('hour-9', nine);
-  localStorage.setItem('hour-10', ten);
-  localStorage.setItem('hour-11', eleven);
-  localStorage.setItem('hour-12', twelve);
-  localStorage.setItem('hour-13', one);
-  localStorage.setItem('hour-14', two);
-  localStorage.setItem('hour-15', three);
-  localStorage.setItem('hour-16', four);
-  localStorage.setItem('hour-17', five);  
+
+$('hour-9').siblings('description') = console.log("it works");
+//first step is when i click on a button I want to console log the value beside it
+  //localStorage.setItem('hour-9', nine);
+  //localStorage.setItem('hour-10', ten);
+  // localStorage.setItem('hour-11', eleven);
+  // localStorage.setItem('hour-12', twelve);
+  // localStorage.setItem('hour-13', one);
+  // localStorage.setItem('hour-14', two);
+  // localStorage.setItem('hour-15', three);
+  // localStorage.setItem('hour-16', four);
+  // localStorage.setItem('hour-17', five);  
+
+  // var nine = document.getElementById('nine').value;
+  // var ten = document.getElementById('ten').value;
+  // var eleven = document.getElementById('eleven').value;
+  // var twelve = document.getElementById('twelve').value;
+  // var eleven = document.getElementById('one').value;
+  // var two = document.getElementById('two').value;
+  // var three = document.getElementById('three').value;
+  // var four = document.getElementById('four').value;
+  // var five = document.getElementById('five').value;
 })
+
+
 
 
 function currentTime(){
