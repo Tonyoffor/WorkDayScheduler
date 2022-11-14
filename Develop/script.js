@@ -13,10 +13,11 @@ currentTime();
 
 //This is the save button command 
 $(".saveBtn").on("click", function(){
-var userinput = $(this).siblings(".description").val();
+var userinput9 = $('nine').siblings(".description").val();
+var userinput10 = $('ten').siblings(".description").val();
 console.log($(this).siblings(".description").val());
-localStorage.setItem('hour-9', userinput);
-localStorage.setItem('hour-10', userinput);
+localStorage.setItem('hour-9', userinput9);
+localStorage.setItem('hour-10', userinput10);
   localStorage.setItem('hour-11', userinput);
   localStorage.setItem('hour-12', userinput);
   localStorage.setItem('hour-13', userinput);
