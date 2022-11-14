@@ -11,12 +11,12 @@ WHEN I scroll down
 THEN I am presented with time blocks for standard business hours (done)
 
 WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
+THEN each time block is color-coded to indicate whether it is in the past, present, or future (done)
 
 WHEN I click into a time block
 THEN I can enter an event  (already done)
 
-WHEN I click the save button for that time block
+WHEN I click the save button for that time block (half done)
 THEN the text for that event is saved in local storage
 
 
