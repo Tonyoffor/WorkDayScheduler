@@ -27,13 +27,13 @@ var userinput17 = $('#five').val();
 
 localStorage.setItem('hour-9', userinput9);
 localStorage.setItem('hour-10', userinput10);
-  localStorage.setItem('hour-11', userinput11);
-  localStorage.setItem('hour-12', userinput12);
-  localStorage.setItem('hour-13', userinput13);
-  localStorage.setItem('hour-14', userinput14);
-  localStorage.setItem('hour-15', userinput15);
-  localStorage.setItem('hour-16', userinput16);
-  localStorage.setItem('hour-17', userinput17);  
+localStorage.setItem('hour-11', userinput11);
+localStorage.setItem('hour-12', userinput12);
+localStorage.setItem('hour-13', userinput13);
+localStorage.setItem('hour-14', userinput14);
+localStorage.setItem('hour-15', userinput15);
+localStorage.setItem('hour-16', userinput16);
+localStorage.setItem('hour-17', userinput17);  
 })
 
 
