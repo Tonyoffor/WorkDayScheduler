@@ -23,8 +23,7 @@ var userinput15 = $('#three').val();
 var userinput16 = $('#four').val();
 var userinput17 = $('#five').val();
 
-//this is used to log the data into local storage
-
+//this is used to log the data into local storage by getting the values from the var above
 localStorage.setItem('hour-9', userinput9);
 localStorage.setItem('hour-10', userinput10);
 localStorage.setItem('hour-11', userinput11);
@@ -36,7 +35,16 @@ localStorage.setItem('hour-16', userinput16);
 localStorage.setItem('hour-17', userinput17);  
 })
 
-
+//These elements are used to get the data that is stored in local storage
+$('#hour-9 .description').val(localStorage.getItem('hour-9'));
+$('#hour-10 .description').val(localStorage.getItem('hour-10'));
+$('#hour-11 .description').val(localStorage.getItem('hour-11'));
+$('#hour-12 .description').val(localStorage.getItem('hour-12'));
+$('#hour-13 .description').val(localStorage.getItem('hour-13'));
+$('#hour-14 .description').val(localStorage.getItem('hour-14'));
+$('#hour-15 .description').val(localStorage.getItem('hour-15'));
+$('#hour-16 .description').val(localStorage.getItem('hour-16'));
+$('#hour-17 .description').val(localStorage.getItem('hour-17'));
 
 //This function adds the color
 function currentTime(){
@@ -63,3 +71,6 @@ for (let i = 0; i < time_blocks.length; i++) {
     textareas[i].style.backgroundColor='#77dd77';
   }
 }};
+
+
+
