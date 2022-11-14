@@ -1,29 +1,30 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+// Here I set my global varibales
 var currentDay = $('#currentDay');
 var saveBtn = $('saveBtn');
 var userinput = $('userinput');
 
 
-
+// I used this function to show th current date
 const d = new Date();
 document.getElementById("today").innerHTML = d;
 
-
+//This calls the function current time
 currentTime();
 
+//This is the save button command 
 $(".saveBtn").on("click", function(){
-
-$('hour-9').siblings('description') = console.log("it works");
-//first step is when i click on a button I want to console log the value beside it
-  //localStorage.setItem('hour-9', nine);
-  //localStorage.setItem('hour-10', ten);
-  // localStorage.setItem('hour-11', eleven);
-  // localStorage.setItem('hour-12', twelve);
-  // localStorage.setItem('hour-13', one);
-  // localStorage.setItem('hour-14', two);
-  // localStorage.setItem('hour-15', three);
-  // localStorage.setItem('hour-16', four);
-  // localStorage.setItem('hour-17', five);  
+var userinput = $(this).siblings(".description").val();
+console.log($(this).siblings(".description").val());
+localStorage.setItem('hour-9', userinput);
+localStorage.setItem('hour-10', userinput);
+  localStorage.setItem('hour-11', userinput);
+  localStorage.setItem('hour-12', userinput);
+  localStorage.setItem('hour-13', userinput);
+  localStorage.setItem('hour-14', userinput);
+  localStorage.setItem('hour-15', userinput);
+  localStorage.setItem('hour-16', userinput);
+  localStorage.setItem('hour-17', userinput);  
+//first step is when I click on a button I want to console log the value beside it
 
   // var nine = document.getElementById('nine').value;
   // var ten = document.getElementById('ten').value;
@@ -38,7 +39,7 @@ $('hour-9').siblings('description') = console.log("it works");
 
 
 
-
+//This function adds the color
 function currentTime(){
   const d = new Date();
 let hour = d.getHours();
